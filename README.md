@@ -93,3 +93,14 @@ so that their outputs can be tested before inclusion in the main OGC Register:
 
 ![OGC Building Blocks processing](https://raw.githubusercontent.com/avillar/bblocks-postprocess/master/process.png)
 
+### Output testing
+
+The outputs can be generated locally by running the following (*Note: Docker must be installed locally*):
+
+```shell
+# Process building blocks
+docker run --rm --workdir /workspace -v $(pwd):/workspace
+# Optional - build Slate docs
+docker run --rm -v "$(pwd)/generateddocs/slate:/srv/slate/source" \
+  -v "$(pwd)/generateddocs/slate-build:/srv/slate/build" slatedocs/slate build
+```
