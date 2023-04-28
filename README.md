@@ -69,7 +69,7 @@ If a `schema.json` (or `schema.yaml`) file is found, it is not necessary to add 
 to `bblock.json`; it will be done automatically on the OGC Building Blocks Register. `ldContext` however,
 is not auto-generated.
 
-References to the schemas of other building blocks can be added using `$ref`. The special `$__ROOT_/` directory
+References to the schemas of other building blocks can be added using `$ref`. The special `$_ROOT_/` directory
 can be used to refer to the root of the central OGC Building Blocks tree. 
 
 ### Validation and tests
