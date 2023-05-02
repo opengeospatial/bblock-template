@@ -7,7 +7,7 @@ Building Blocks can be reused by either:
 
 - cut and paste "ready to use" forms from the "build/" directory
 
-- directly reference the artefacts in the "build" directory using the URL pattern specified in by the building block 
+- directly reference the artefacts in the "build" directory using the URL pattern specified in the building block description
 
 - including as source using `git submodule add {building block repository}` and referencing reused components directly. (in which case the build/ resources of the submodule will referenced in the build/ outputs, but the source definitions will be used for consistency checking and optimisation)
 
