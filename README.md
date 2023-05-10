@@ -71,8 +71,8 @@ The `examples.yaml` file in `my-building-block` can be used as a template.
 ### JSON schema
 
 If a `schema.json` (or `schema.yaml`) file is found, it is not necessary to add the `schema` property 
-to `bblock.json`; it will be done automatically on the OGC Building Blocks Register. `ldContext` however,
-is not auto-generated.
+to `bblock.json`; it will be done automatically on the OGC Building Blocks Register. The same thing
+applies to the `context.jsonld` file and the `ldContext` property.
 
 References to the schemas of other building blocks can be added using `$ref`. The special `$_ROOT_/` directory
 can be used to refer to the root of the central OGC Building Blocks tree. 
