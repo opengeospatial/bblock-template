@@ -3,6 +3,14 @@
 This repository can be used as a template to create new collections of
 [OGC Building Blocks](https://opengeospatial.github.io/bblocks).
 
+Building Blocks can be reused by either:
+
+- cut and paste "ready to use" forms from the "build/" directory
+
+- directly reference the artefacts in the "build" directory using the URL pattern specified in the building block description
+
+- including as source using `git submodule add {building block repository}` and referencing reused components directly. (in which case the build/ resources of the submodule will referenced in the build/ outputs, but the source definitions will be used for consistency checking and optimisation)
+
 ## Building block structure
 
 The following image summarizes the general usage of a building block:
@@ -44,13 +52,14 @@ subdirectories as well, after removing the first element (e.g., Markdown documen
 
 ### Ready to use components
 
-The `build` directory will contain the **_reusable assets_** for implementing this building block.
+The `build/` directory will contain the **_reusable assets_** for implementing this building block.
+
 *Sources* minimise redundant information and preserve original forms of inputs, such as externally published 
 schemas, etc. This allow these to be updated safely, and also allows for alternative forms of original source
 material to be used whilst preserving uniformity of the reusable assets.
 
-**The `build` directory should never be edited**. Moreover, applications should only use resources 
-inside this directory.
+**The `build` directory should never be edited**. Moreover, applications should only use (copy or reference) resources 
+from this directory.
 
 ### Examples
 
@@ -61,16 +70,27 @@ The `examples.yaml` file in `my-building-block` can be used as a template.
 
 ### JSON schema
 
-The JSON schema for a building block can be linked to a conceptual model by using a root-level `x-jsonld-context`
-property pointing to a JSON-LD context document (relative paths are ok). The Building Blocks Register can
-then annotate every property inside the JSON schemas with their corresponding RDF predicate automatically.
-
 If a `schema.json` (or `schema.yaml`) file is found, it is not necessary to add the `schema` property 
-to `bblock.json`; it will be done automatically on the OGC Building Blocks Register. `ldContext` however,
-is not auto-generated.
+to `bblock.json`; it will be done automatically on the OGC Building Blocks Register. The same thing
+applies to the `context.jsonld` file and the `ldContext` property.
 
 References to the schemas of other building blocks can be added using `$ref`. The special `$_ROOT_/` directory
 can be used to refer to the root of the central OGC Building Blocks tree. 
+
+### "Semantic Annotation"
+
+The Building block design allows for "semantic annotation" through the use of a **_context_** document that cross references each schema element to a URI, using the JSON-LD syntax. The end result is still a valid JSON schema, but may also be parsed as flexible RDF graphs if desired.
+
+This provides multiple significant improvements over undocument schemas:
+
+1. differentiates between the same and different meanings for common element names used in different places
+1. can be used to link to a semantic model further describing each element
+1. allows use of advanced, standardised validation of instance data
+1. allows automated annotation of schemas themselves for tools able ot exploit additional information
+
+The JSON schema for a building block is optionally linked to a conceptual model by using a root-level `x-jsonld-context`
+property pointing to a JSON-LD context document (relative paths are ok). The Building Blocks Register can
+then annotate every property inside the JSON schemas with their corresponding RDF predicate automatically.
 
 ### Validation and tests
 
