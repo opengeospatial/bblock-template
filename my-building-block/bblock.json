@@ -1,7 +1,7 @@
 {
   "name": "My Building Block",
   "abstract": "This Building Block serves as a template to create new ones",
-  "status": "valid",
+  "status": "under-development",
   "dateTimeAddition": "2023-04-05T00:00:00Z",
   "itemClass": "schema",
   "register": "ogc-building-block-register",
