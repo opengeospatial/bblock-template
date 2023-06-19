@@ -22,7 +22,7 @@ The following image summarizes the general usage of a building block:
 The `_sources` directory will contain the sources for the building blocks inside this repository.
 
 - `bblock.json`: Contains the metadata for the building block. Please refer to this
-  [JSON schema](https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/metadata-schema.yaml)
+  [JSON schema](https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml)
   for more information.
 - `description.md`: Human-readable, Markdown document with the description of this building block.
 - `examples.yaml`: A list of examples for this building block. See [Examples](#examples) below.
