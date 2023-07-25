@@ -81,6 +81,9 @@ Instead of the `code`, a `ref` with a filename relative to `examples.yaml` can b
       ref: example1.json # in the same directory as examples.yaml  
 ```
 
+Please refer to [the updated JSON schema for `examples.yaml`](https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/examples-schema.yaml)
+for more information.
+
 The `examples.yaml` file in `my-building-block` can be used as a template.
 
 ### JSON schema
