@@ -158,6 +158,8 @@ block **will be overwritten**.
 4. Replace this README.md file with documentation about the new building block(s).
 5. Contact OGC and request that your new building block(s) be added to the official Register.
 6. Set the `identifier-prefix` provided by OGC in `bblocks-config.yaml`.
+7. Optional: Enable GitHub pages in the repository settings, setting "Source" (under "Build and deployment")
+   to "GitHub Actions".
 
 Note: building blocks subdirectories can be grouped inside other directories, like so:
 

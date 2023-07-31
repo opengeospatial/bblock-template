@@ -1,4 +1,4 @@
-name: Validate and process Building Block
+name: Validate and process Building Blocks
 on:
   workflow_dispatch:
   push:
