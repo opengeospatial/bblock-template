@@ -152,7 +152,7 @@ block **will be overwritten**.
 ## How-to
 
 1. Fork (or click on "Use this template" on GitHub) this repository.
-2. For each new building block, replace or create a copy of the `my-building-block`.
+2. For each new building block, replace or create a copy of the `my-building-block` inside `_sources`.
    Note: **the name of the new directory will be part of the building block identifier**.
 3. Update the [building block's files](#building-block-structure).
 4. Replace this README.md file with documentation about the new building block(s).
