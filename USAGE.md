@@ -19,7 +19,7 @@ Building Blocks can be reused by either:
    2. see [Semantic Annotation](JSONLD.md) for information how to "uplift" a schema - linking to a model using JSON-LD.
    3. see [Semantic Models in RDF](RDF.md) for information how to create a building block to profile and test semantic models.
    4. see [JSON Schema Profiling](JSONSCHEMA-PROFILING.md) for information how to specialise an existing schema.
-   5. see [SHACL Rules](SHACL.md) for information how to define powerful constraints for semantic models.
+   5. see [SHACL Rules](TESTING.md) for information how to define powerful constraints for semantic models.
    6. see [Transforms](TXFORMS.md) for information how to define and test transformations.
 4. Replace the README.md file with documentation about the new building block(s).
 5. Optional: Enable GitHub pages in the repository settings, setting "Source" (under "Build and deployment")

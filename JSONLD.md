@@ -17,4 +17,3 @@ The Building Blocks design allows automatic combination of contexts based on the
 ## Context design
 
 _TBD: document local contexts and use of @base mappings. _ 
-_TBD: document local contexts and use of @base mappings. _ 
