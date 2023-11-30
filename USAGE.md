@@ -15,10 +15,14 @@ Building Blocks can be reused by either:
 2. For each new building block, replace or create a copy of the `my-building-block` inside `_sources`.
    Note: **the name of the new directory will be part of the building block identifier**.
 3. Update the [building block's files](#building-block-structure).
-4. Replace this README.md file with documentation about the new building block(s).
-5. Contact OGC and request that your new building block(s) be added to the official Register.
-6. Set the `identifier-prefix` provided by OGC in `bblocks-config.yaml`.
-7. Optional: Enable GitHub pages in the repository settings, setting "Source" (under "Build and deployment")
+   1. see [Using a published schema](SCHEMAS.md) for information how test an existing schema.
+   2. see [Semantic Annotation](JSONLD.md) for information how to "uplift" a schema - linking to a model using JSON-LD.
+   3. see [Semantic Models in RDF](RDF.md) for information how to create a building block to profile and test semantic models.
+   4. see [JSON Schema Profiling](JSONSCHEMA-PROFILING.md) for information how to specialise an existing schema.
+   5. see [SHACL Rules](SHACL.md) for information how to define powerful constraints for semantic models.
+   6. see [Transforms](TXFORMS.md) for information how to define and test transformations.
+4. Replace the README.md file with documentation about the new building block(s).
+5. Optional: Enable GitHub pages in the repository settings, setting "Source" (under "Build and deployment")
    to "GitHub Actions".
 
 Note: building blocks subdirectories can be grouped inside other directories, like so:
@@ -37,6 +41,14 @@ type2/
 ```
 
 In that case, `type1`, `type2` and `subtype2-1` will also be part of the building block identifiers.
+
+## Registering your building block
+
+Building blocks can be aggregated into registers, such as OGC's official and incubator registries.
+
+### Making your own Building Block Register
+
+TBD 
 
 ## Building block structure
 

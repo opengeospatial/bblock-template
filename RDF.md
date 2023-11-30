@@ -1,6 +1,12 @@
-# Profiling JSON Schemas
+# RDF-only building blocks
 
-Profiling JSON schemas is a complex subject. This document is a placeholder for a description of best practices and support tooling.
+Building Blocks can be defined that use RDF only, 
+
+A RDF building block can
+
+1. Define RDF (TTL) examples how to use the Semantic model
+2. Apply SHACL Rules to [validate examples](TESTING.md#SHACL)
+3. [Perform transforms](TXFORMS.md) and validate results
 
 ## Why is this challenging?
 
@@ -8,11 +14,7 @@ The JSON Schema specification and tooling landscape is complex.  Versions of the
 
 In particular, reuse mechanisms such as $dynamicRef may not be available.
 
-## Version-agnostic Building Blocks
-
-The Building Block post-processing tooling automatically generates OAS 3.0 and OAS 3.1 compatible schemas. It is recommended to develop new building blocks using improved modularity and reuse support in modern schema versions, and allow the Building Block to create a "down-compiled version".
-
-## OAS 3.0 Compatibility
+## Current state of play
 
 OGC APIs are currently bound to OAS v3.0 which limits JSON schema patterns that can be supported.
 
