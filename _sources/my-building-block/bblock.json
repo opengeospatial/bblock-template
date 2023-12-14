@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml",
+  "$schema": "metaschema.yaml",
   "name": "My Building Block",
   "abstract": "This Building Block serves as a template to create new ones",
   "status": "under-development",

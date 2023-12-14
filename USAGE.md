@@ -224,3 +224,7 @@ docker run --pull=always --rm \
 * Output files will be created under `build-local` (not tracked by git by default)
 * The value for `--base-url` will be used to generate the public URLs (schemas, documentation, etc.)
 
+## Tools
+
+The following tools are useful for getting each component working during development:
+
