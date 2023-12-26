@@ -1,3 +1,5 @@
+name: My OGC Building Blocks repository
+
 identifier-prefix: ogc.bbr.template.
 
 imports:

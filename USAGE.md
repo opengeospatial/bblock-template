@@ -14,15 +14,18 @@ Building Blocks can be reused by either:
 1. Fork (or click on "Use this template" on GitHub) this repository.
 2. For each new building block, replace or create a copy of the `my-building-block` inside `_sources`.
    Note: **the name of the new directory will be part of the building block identifier**.
-3. Update the [building block's files](#building-block-structure).
-   1. see [Using a published schema](SCHEMAS.md) for information how test an existing schema.
-   2. see [Semantic Annotation](JSONLD.md) for information how to "uplift" a schema - linking to a model using JSON-LD.
-   3. see [Semantic Models in RDF](RDF.md) for information how to create a building block to profile and test semantic models.
-   4. see [JSON Schema Profiling](JSONSCHEMA-PROFILING.md) for information how to specialise an existing schema.
-   5. see [SHACL Rules](TESTING.md) for information how to define powerful constraints for semantic models.
-   6. see [Transforms](TXFORMS.md) for information how to define and test transformations.
-4. Replace the README.md file with documentation about the new building block(s).
-5. Optional: Enable GitHub pages in the repository settings, setting "Source" (under "Build and deployment")
+3. Set a `name` for the repository inside `bblocks-config.yaml`.
+4. Configure any necessary [imports](#setting-up-imports) inside `bblocks-config.yaml`.
+5. Set the `identifier-prefix` provided by OGC in `bblocks-config.yaml`.
+6. Update the [building block's files](#building-block-structure).
+   1. See [Using a published schema](SCHEMAS.md) for information how test an existing schema.
+   2. See [Semantic Annotation](JSONLD.md) for information how to "uplift" a schema - linking to a model using JSON-LD.
+   3. See [Semantic Models in RDF](RDF.md) for information how to create a building block to profile and test semantic models.
+   4. See [JSON Schema Profiling](JSONSCHEMA-PROFILING.md) for information how to specialise an existing schema.
+   5. See [SHACL Rules](TESTING.md) for information how to define powerful constraints for semantic models.
+   6. See [Transforms](TXFORMS.md) for information how to define and test transformations.
+7. Replace the README.md file with documentation about the new building block(s).
+8. Optional: Enable GitHub pages in the repository settings, setting "Source" (under "Build and deployment")
    to "GitHub Actions".
 
 Note: building blocks subdirectories can be grouped inside other directories, like so:
@@ -88,6 +91,29 @@ For example, given a `r1.branch1.` identifier prefix and a `cat1/cat2/my-bb/bblo
 the generated identifier would be `r1.branch1.cat1.cat2.my-bb`. This applies to the documentation
 subdirectories as well, after removing the first element (e.g., Markdown documentation will be written to
 `generateddocs/markdown/branch1/cat1/cat2/my-bb/index.md`).
+
+### Setting up imports
+
+Any building blocks repository can import any other repository, so that references by id to building blocks
+(e.g. inside schemas, in `bblock.json`, etc.) belonging to the imported repositories can be automatically resolved.
+
+Repository imports can be defined as an array of URLs to the output `register.json` of other repositories inside
+`bblocks-config.yaml`:
+
+* If `imports` is missing from `bblocks-config.yaml`, the
+  [main OGC Building Blocks repository](http://blocks.ogc.org/register.html) will be imported by default.
+* `default` can be used instead of a URL to refer to the
+  [main OGC Building Blocks repository](http://blocks.ogc.org/register.html). 
+* If `imports` is an empty array, no repositories will be imported.
+
+For example, the following will import two repositories, one of them being the main OGC Building Blocks repository:
+
+```yaml
+name: Repository with imports
+imports:
+  - default
+  - https://example.com/bbr/repository.json
+```
 
 ### Ready to use components
 
