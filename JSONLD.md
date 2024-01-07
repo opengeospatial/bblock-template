@@ -1,8 +1,10 @@
 # JSON-LD (Semantic Uplift)
 
-Building Blocks defining JSON schemas can be annotated with JSON-LD contexts using the file _context.jsonld_
-
-This: 
+Building Blocks defining JSON schemas can be annotated with JSON-LD contexts using either:
+ - including a file (_context.jsonld_) in the building block directory
+ - using the property `x-jsonld-context` in the _schema.(yaml/json) for the building block - e.g. `x-jsonld-context: ../../../sosa-ssn.jsonld`
+ 
+The JSON LD context: 
 
 1. Maps JSON elements to URIs (which can be URIs of a richer semantic model)
 2. Allows validation of complex logical constraints using SHACL Rules to [validate examples](TESTING.md#SHACL)
