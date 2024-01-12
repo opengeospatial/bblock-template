@@ -17,15 +17,16 @@ Building Blocks can be reused by either:
 3. Set a `name` for the repository inside `bblocks-config.yaml`.
 4. Configure any necessary [imports](#setting-up-imports) inside `bblocks-config.yaml`.
 5. Set the `identifier-prefix` provided by OGC in `bblocks-config.yaml`.
-6. Update the [building block's files](#building-block-structure).
+6. Set the [additional register metadata properties]() in `bblocks-config.yaml`.
+7. Update the [building block's files](#building-block-structure).
    1. See [Using a published schema](SCHEMAS.md) for information how test an existing schema.
    2. See [Semantic Annotation](JSONLD.md) for information how to "uplift" a schema - linking to a model using JSON-LD.
    3. See [Semantic Models in RDF](RDF.md) for information how to create a building block to profile and test semantic models.
    4. See [JSON Schema Profiling](JSONSCHEMA-PROFILING.md) for information how to specialise an existing schema.
    5. See [SHACL Rules](TESTING.md) for information how to define powerful constraints for semantic models.
    6. See [Transforms](TXFORMS.md) for information how to define and test transformations.
-7. Replace the README.md file with documentation about the new building block(s).
-8. Optional: Enable GitHub pages in the repository settings, setting "Source" (under "Build and deployment")
+8. Replace the README.md file with documentation about the new building block(s).
+9. Optional: Enable GitHub pages in the repository settings, setting "Source" (under "Build and deployment")
    to "GitHub Actions".
 
 Note: building blocks subdirectories can be grouped inside other directories, like so:
@@ -114,6 +115,15 @@ imports:
   - default
   - https://example.com/bbr/repository.json
 ```
+
+### Additional register metadata properties
+
+The following additional properties can be set inside `bblocks-config.yml`:
+
+* `name`: A (short) string with the name of the register.
+* `abstract`: A short text to serve as an introduction to the register or building blocks collection. 
+  Markdown can be used here.
+* `description`: A longer text with a description of the register or collection. Markdown can be used here.
 
 ### Ready to use components
 
