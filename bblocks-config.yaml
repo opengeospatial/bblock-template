@@ -1,6 +1,14 @@
 name: My OGC Building Blocks repository
+abstract: |
+  This is an example text for the abstract. It should be short and to the point.
+  A "Tell me more" link will appear if there is an additional description with a longer explanation.
+
+description: |
+  The description can be longer. Both **the abstract** *and the description* support Markdown,
+  including [links](https://google.es).
 
 identifier-prefix: ogc.bbr.template.
 
 imports:
   - default
+
