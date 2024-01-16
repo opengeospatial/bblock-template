@@ -68,6 +68,8 @@ The `_sources` directory will contain the sources for the building blocks inside
   [JSON schema](https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/master/ogc/bblocks/metadata-schema.yaml)
   for more information.
 - `description.md`: Human-readable, Markdown document with the description of this building block.
+  Relative links and images can be included in this file, and they will be resolved to full
+  URLs when the building block is processed. 
 - `examples.yaml`: A list of examples for this building block. See [Examples](#examples) below.
 - `schema.json`: JSON schema for this building block, if any. See [JSON schema](#json-schema) below.
     - `schema.yaml`, in YAML format, is also accepted (and even preferred).
@@ -141,6 +143,9 @@ from this directory.
 Each example consists of Markdown `content` and/or a list of `snippets`. `snippets`, in turn,
 have a `language` (for highlighting, language tabs in Slate, etc.) and the `code` itself.
 
+`content` accepts text in Markdown format. Any relative links or images will be resolved to full
+URLs when the building block is published (see [Assets](#assets)).
+
 Instead of the `code`, a `ref` with a filename relative to `examples.yaml` can be provided:
 
 ```yaml
@@ -213,14 +218,17 @@ if the test fails (JSON SCHEMA, SHACL shapes, etc.); this allows writing negativ
 
 ### Assets
 
+Any relative URL included in the description of the building block and in the markdown content of the
+examples will be converted into a full URL relative to the source location (i.e., that of `bblock.json`).-
+
 Assets (e.g., images) can be placed in the `assets/` directory for later use in documentation pages,
-by using references to `@@assets@@/filename.ext`.
+by using references to `assets/filename.ext`.
 
 For example, a `sample.png` image in that directory can be included in the description
 Markdown code of a building block like this:
 
 ```markdown
-![This is a sample image](@@assets@@/sample.png)
+![This is a sample image](assets/sample.png)
 ```
 
 ### "Super Building Blocks"
