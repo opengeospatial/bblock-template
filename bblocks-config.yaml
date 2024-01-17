@@ -1,14 +1,28 @@
+# A short, descriptive name of this building block collection
 name: My OGC Building Blocks repository
+
+# Short abstract for this collection (optional)
 abstract: |
   This is an example text for the abstract. It should be short and to the point.
   A "Tell me more" link will appear if there is an additional description with a longer explanation.
 
+# Description for this collection (optional)
 description: |
   The description can be longer. Both **the abstract** *and the description* support Markdown,
   including [links](https://google.es).
 
+# Customize the following prefix (will be prepended to the path of the building blocks):
 identifier-prefix: ogc.bbr.template.
 
+# List of imports ("default" is an alias for the main OGC Building Blocks Register)
 imports:
   - default
 
+# SPARQL configuration (optional)
+#   Authentication can be set through the SPARQL_USERNAME and SPARQL_PASSWORD environment variables
+#
+# sparql:
+#   push: https://example.com/gsp           # SPARQL Graph Store Protocol endpoint for uploading data
+#   graph: https://my.bblocks.example.com/  # SPARQL Graph where data will be uploaded
+#                                           #  if left empty, the base URL for the publication will be used
+#   query: https://example.com/sparql       # SPARQL query endpoint where data will be available
