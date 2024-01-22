@@ -1,0 +1,9 @@
+# Additional / external tests resources by reference
+
+# - ref: https://example.com/my-test.json       # Simple test resource by reference
+
+# - ref: https://example.com/my-other-test.json
+#   output-filename: different.json             # Test with custom output-filename
+
+# - ref: https://example.com/failing-test.json
+#   require-fail: true                          # Override require fail without changing filename

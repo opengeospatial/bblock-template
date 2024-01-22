@@ -7,11 +7,15 @@ These can be supplemented with additional custom validation and transformation p
 
 ## Examples
 
-Examples defined in the ```examples.yaml``` (inline or by file reference) get validated and included in generated documentation.
+Examples defined in the `examples.yaml` (inline or by file reference) get validated and included in generated documentation.
 
-Test cases defines in the ```tests/``` subdirectory of each building block get validated.
+Test cases defines in the `tests/` subdirectory of each building block get validated. Additional or external tests
+can be added in `tests.yaml` as a list of objects with a `ref` property pointing to the test resource's location,
+and optionally defining the `output-filename` and/or `require-fail` properties (for more information, see the 
+example `tests.yaml` file provided in the template and 
+[the JSON Schema for `tests.yaml`](https://github.com/opengeospatial/bblocks-postprocess/blob/master/ogc/bblocks/extra-tests-schema.yaml).
 
-In each case, the ```/build/tests/``` directory contains a set of validation outputs.
+In each case, the `/build/tests/` directory contains a set of validation outputs.
 
 Validation includes the following steps:
 
@@ -19,7 +23,7 @@ Validation includes the following steps:
 2. (if JSON schema supplied) JSON schema validation
 3. (if SHACL rules defined) SHACL validation
 
-A summary report is produced at ```/build/tests/report.html```.
+A summary report is produced at `/build/tests/report.html`.
 
 This is linked from the generated building block index.
 
