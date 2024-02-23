@@ -1,7 +1,7 @@
 {
   "$schema": "metaschema.yaml",
-  "name": "My Building Block",
-  "abstract": "This Building Block serves as a template to create new ones",
+  "name": "My Schema",
+  "abstract": "An example schema defining the set of properties of any type of object.",
   "status": "under-development",
   "dateTimeAddition": "2023-04-05T00:00:00Z",
   "itemClass": "schema",

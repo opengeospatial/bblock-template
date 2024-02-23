@@ -1,8 +1,12 @@
 - title: This is an example with just a description and no code snippets.
   content: |-
-    This is the content of the example.
+    This an example.
     
     In **Markdown** format.
+
+  snippets:
+    - language: json
+      ref: example.json
 
 - title: Examples can have content and/or code snippets.
   content: |-

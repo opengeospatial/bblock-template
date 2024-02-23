@@ -1,0 +1,27 @@
+{
+  "name": "Custom Feature",
+  "abstract": "This examples shows a simple customisation for OGC API Feature schemas",
+  "status": "under-development",
+  "dateTimeAddition": "2023-05-19T00:00:00Z",
+  "itemClass": "schema",
+  "register": "ogc-building-block-examples",
+  "version": "1.0",
+  "dateOfLastChange": "2023-05-19",
+  "sources": [
+    {
+      "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
+      "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7"
+    }
+  ],
+  "maturity": "development",
+  "scope": "unstable",
+  "dependsOn": [
+    "ogc.bbr.examples.propertySet"
+  ],
+  "tags": [
+    "feature",
+    "examples"
+  ],
+  "group": "Examples",
+  "highlighted": true
+}

@@ -1,0 +1,9 @@
+{
+  "@context": {
+    "mynamespace": "http://example.org/ns1/"
+  },
+  "a": "mynamespace:aThing",
+  "b": 23,
+  "c": 1
+}
+
