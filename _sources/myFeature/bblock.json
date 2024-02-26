@@ -16,7 +16,6 @@
   "maturity": "development",
   "scope": "unstable",
   "dependsOn": [
-    "ogc.bbr.examples.propertySet"
   ],
   "tags": [
     "feature",
