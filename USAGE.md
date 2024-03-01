@@ -254,7 +254,7 @@ The outputs can be generated locally by running the following:
 ```shell
 # Process building blocks
 docker run --pull=always --rm --workdir /workspace -v "$(pwd):/workspace" \
-  ghcr.io/opengeospatial/bblocks-postprocess  --clean true
+  ghcr.io/opengeospatial/bblocks-postprocess  --clean true --base-url http://localhost:9090/register/
 # Optional - build Slate docs
 docker run --pull=always --rm \
   -v "$(pwd)/build-local/generateddocs/slate:/srv/slate/source" \
@@ -267,7 +267,10 @@ docker run --pull=always --rm \
 * Docker must be installed locally for the above commands to run
 * The syntax for `-v "$(pwd):/workspace"` may vary depending on your operating system
 * Output files will be created under `build-local` (not tracked by git by default)
-* The value for `--base-url` will be used to generate the public URLs (schemas, documentation, etc.)
+* The value for `--base-url` will be used to generate the public URLs (schemas, documentation, etc.). In this case,
+  we use the local `http://localhost:9090/register/` URL to make the output **compatible with the
+  viewer** when running locally (see below). If omitted, the value will be autodetected from the repository
+  metadata.
 
 #### Building Blocks Viewer
 
