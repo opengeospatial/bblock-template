@@ -49,7 +49,7 @@ e.g. to make the relatively simple constraints that a "SurveyObservationCollecti
         }
       ]
     }
-  },
+  }
 ```
 
 ## Future options
