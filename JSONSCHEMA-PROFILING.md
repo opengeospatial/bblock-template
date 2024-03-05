@@ -20,7 +20,7 @@ The implication is that currently it is typical necessary to recreate complex st
 
 e.g. to make the relatively simple constraints that a "SurveyObservationCollection" is a collection  "SurveyObservation" objects, and must declare that some schema for describing "SensorType" is used, a significant portion of the structure must be detailed.
 
-```
+```json
 
 "SurveyVectorObsCollection": {
       "allOf": [
