@@ -85,7 +85,7 @@ The `_sources` directory will contain the sources for the building blocks inside
 - `assets/`: Documentation assets (e.g. images) directory. See [Assets](#assets) below.
 - `tests/`: Test resources. See [Validation](#validation-and-tests).
 
-This repository includes a sample building block in the `my-building-block` directory.
+This repository includes sample building blocks such as the `myFeature` and `mySchema` directories, showing how these are combined through JSON schema imports.
 
 Building Block identifiers are automatically generated in the form:
 
@@ -124,7 +124,7 @@ For example, the following will import two repositories, one of them being the m
 name: Repository with imports
 imports:
   - default
-  - https://example.com/bbr/repository.json
+  - https://example.com/myBBrepository/build/register.json
 ```
 
 ### Additional register metadata properties
@@ -259,6 +259,10 @@ so that their outputs can be tested before inclusion in the main OGC Register:
 ### Output testing
 
 The outputs can be generated locally by running the following:
+
+`build.sh`
+
+or 
 
 ```shell
 # Process building blocks
