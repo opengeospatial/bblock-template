@@ -1,5 +1,5 @@
-"$schema": https://json-schema.org/draft/2020-12/schema
-description: 'My example schema'
+$schema: https://json-schema.org/draft/2020-12/schema
+description: My example schema
 type: object
 properties:
   a:

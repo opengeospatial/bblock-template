@@ -1,8 +1,44 @@
-- title: GeoJSON - specialisation example.
-  comment:
-    This examples shows how to define a customised schema based on an existing building block - in this case the OGC API Features basic GeoJSON Feature response
-  
-  base-uri: http://example.com/features/
-  snippets:
-    - language: json
-      ref: examples/feature.json
+## Prefixes will be used for all RDF Turtle resources so that they can be omitted from the actual snippets
+# prefixes:
+#   dct: http://purl.org/dc/terms/
+
+## List of examples
+examples:
+  - title: GeoJSON - specialisation example.
+
+    ## Markdown content that will be shown for the example.
+    content:
+      This examples shows how to define a customised schema based on an existing building block 
+      - in this case the *OGC API Features* basic GeoJSON Feature response
+
+    ## Base URI for semantic uplift
+    base-uri: http://example.com/features/
+
+    ## The example can define its own prefixes, that will be merged with the global ones
+    # prefixes:
+    #   ex: http://example.com/
+
+    ## List of code snippets for this example
+    snippets:
+      - language: json
+        # Reference to file
+        ref: examples/feature.json
+      - language: yaml
+        # Inline content
+        content: |
+          id: 16
+          type: Feature
+          geometry: null
+          properties:
+            my-prop: my-value
+        ## A snippet can also have its own base-uri, overriding that of the example
+        # base-uri: http://example.com/features-2/
+
+        ## A different schema (or fragment thereof) can be used for validating this example.
+        ## This is especially useful for examples that only showcase a part of the whole schema
+        # schema-ref: '#/$defs/single-definition'
+
+        ## An RDF document that will be used as a closure (additional data) that will be added to the example
+        ## RDF when performing SHACL validation.
+        # shacl-closure: my-data.ttl
+
