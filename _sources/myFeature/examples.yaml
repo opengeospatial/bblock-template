@@ -25,7 +25,7 @@ examples:
         ref: examples/feature.json
       - language: yaml
         # Inline content
-        content: |
+        code: |
           id: 16
           type: Feature
           geometry: null
