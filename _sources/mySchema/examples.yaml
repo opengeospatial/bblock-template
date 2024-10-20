@@ -3,7 +3,8 @@
     This an example.
     
     In **Markdown** format.
-
+  prefixes:
+    mynamespace: http://example.com/mythings/
   snippets:
     - language: json
       ref: example.json
