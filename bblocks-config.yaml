@@ -18,6 +18,10 @@ identifier-prefix: ogc.bbr.template.
 imports:
   - default
 
+# Whether to enable the (highly experimental) downcompiling of JSON schemas to an OpenAPI 3.0-compatible
+# version
+schema-oas30-downcompile: False
+
 # SPARQL configuration (optional)
 #   Authentication can be set through the sparql_username and sparql_password GitHub Workflow inputs
 #   (see .github/workflow/process-bblocks.yml)
