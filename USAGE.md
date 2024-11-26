@@ -1,7 +1,7 @@
 # OGC Building Block template
 
 This repository can be used as a template to create new collections of
-[OGC Building Blocks](https://opengeospatial.github.io/bblocks).
+[OGC Building Blocks](https://ogcincubator.github.io/bblocks-docs/).
 
 Building Blocks can be reused by either:
 
@@ -24,16 +24,16 @@ Building Blocks can be reused by either:
      references (in dependency declarations, schemas, etc.).
 3. Set a `name` for the repository inside `bblocks-config.yaml`.
 4. Configure any necessary [imports](#setting-up-imports) inside `bblocks-config.yaml`.
-5. Set the [additional register metadata properties]() in `bblocks-config.yaml`.
+5. Set the [additional register metadata properties](#additional-register-metadata-properties) in `bblocks-config.yaml`.
 6. For each new building block, replace or create a copy of the `mySchema` or `myFeature` inside `_sources`.
    Note: **the path to and name of the new directory will be part of the building block identifier**.
 7. Update the [building block's files](#building-block-structure).
-   1. See [Using a published schema](SCHEMAS.md) for information how test an existing schema.
-   2. See [Semantic Annotation](JSONLD.md) for information how to "uplift" a schema - linking to a model using JSON-LD.
-   3. See [Semantic Models in RDF](RDF.md) for information how to create a building block to profile and test semantic models.
-   4. See [JSON Schema Profiling](JSONSCHEMA-PROFILING.md) for information how to specialise an existing schema.
-   5. See [SHACL Rules](TESTING.md) for information how to define powerful constraints for semantic models.
-   6. See [Transforms](TXFORMS.md) for information how to define and test transformations.
+   1. See [Using a published schema](https://ogcincubator.github.io/bblocks-docs/create/schema) for information how test an existing schema.
+   2. See [Semantic Annotation](https://ogcincubator.github.io/bblocks-docs/create/semantic-uplift) for information how to "uplift" a schema - linking to a model using JSON-LD.
+   3. See [Semantic Models in RDF](https://ogcincubator.github.io/bblocks-docs/create/rdf-only) for information how to create a building block to profile and test semantic models.
+   4. See [JSON Schema Profiling](https://ogcincubator.github.io/bblocks-docs/create/schema#profiling-json-schemas) for information how to specialise an existing schema.
+   5. See [SHACL Rules](https://ogcincubator.github.io/bblocks-docs/create/validation) for information how to define powerful constraints for semantic models.
+   6. See [Transforms](https://ogcincubator.github.io/bblocks-docs/create/transforms) for information how to define and test transformations.
 8. Replace the README.md file with documentation about the new building block(s).
 9. Enable GitHub pages in the repository settings, setting "Source" (under "Build and deployment")
    to "GitHub Actions".
