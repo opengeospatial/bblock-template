@@ -31,3 +31,5 @@ schema-oas30-downcompile: False
 #   graph: https://my.bblocks.example.com/  # SPARQL Graph where data will be uploaded
 #                                           #  if left empty, the base URL for the publication will be used
 #   query: https://example.com/sparql       # SPARQL query endpoint where data will be available
+#   resources:                              # Additional resources to upload apart from building block metadata
+#      ontologies: true                     #   Whether to upload ontology files to the triplestore
