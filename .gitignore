@@ -1,5 +1,5 @@
 build-local/
 .idea/
-bblock-config-local.yml
-bblock-config-local.yaml
+bblocks-config-local.yml
+bblocks-config-local.yaml
 .volumes
