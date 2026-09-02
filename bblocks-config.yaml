@@ -14,9 +14,18 @@ description: |
 # Customize the following prefix (will be prepended to the path of the building blocks):
 identifier-prefix: ogc.bbr.template.
 
-# List of imports ("default" is an alias for the main OGC Building Blocks Register)
+# List of imports ("default" is an alias for the main OGC Building Blocks Register).
+# An entry can also be an "@org/register" alias (e.g. "@ogc/main", equivalent to "default"),
+# resolved against a Building Blocks meta-registry -- see "meta-registry" below -- instead of
+# a full register.json URL.
 imports:
   - default
+
+# Meta-registry used to resolve "@org/register" import aliases above (optional).
+# Defaults to the postprocessor's built-in meta-registry if omitted; set to null to disable
+# alias resolution entirely (any "@org/register" import will then fail).
+#
+# meta-registry: https://w3id.org/ogc/bblocks/meta-register.json
 
 # Whether to enable the (highly experimental) downcompiling of JSON schemas to an OpenAPI 3.0-compatible
 # version
